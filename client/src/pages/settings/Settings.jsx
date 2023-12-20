@@ -15,6 +15,7 @@ export default function Settings() {
   const PF = "http://localhost:5000/images/"
 
   const handleSubmit = async (e) => {
+    console.log("enter ");
     e.preventDefault();
     dispatch({ type: "UPDATE_START" });
     const updatedUser = {
@@ -23,18 +24,24 @@ export default function Settings() {
       email,
       password,
     };
+    console.log(updatedUser);
     if (file) {
       const data = new FormData();
       const filename = Date.now() + file.name;
       data.append("name", filename);
       data.append("file", file);
       updatedUser.profilePic = filename;
+      console.log(file);
       try {
+        console.log("updated");
         await axios.post("/upload", data);
       } catch (err) {}
     }
+    console.log("welcome");
     try {
-      const res = await axios.put("/users/" + user._id, updatedUser);
+      console.log(user);
+      console.log(updatedUser);
+      const res = await axios.put("http://localhost:5000/api/users/" + user._id, updatedUser);
       setSuccess(true);
       dispatch({ type: "UPDATE_SUCCESS", payload: res.data });
     } catch (err) {

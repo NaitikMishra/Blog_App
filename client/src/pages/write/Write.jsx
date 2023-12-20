@@ -11,6 +11,7 @@ export default function Write() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
     const newPost = {
       username: user.username,
       title,
@@ -26,6 +27,7 @@ export default function Write() {
         await axios.post("/upload", data);
       } catch (err) {}
     }
+    
     try {
       const res = await axios.post("/posts", newPost);
       window.location.replace("/post/" + res.data._id);

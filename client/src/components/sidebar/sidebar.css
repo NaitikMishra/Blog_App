@@ -62,3 +62,9 @@
     margin-left: 10px;
     cursor: pointer;
 }
+
+.sidebarphoto{
+  object-fit: contain;
+  width: 30vw;
+  height: 30vh;
+}

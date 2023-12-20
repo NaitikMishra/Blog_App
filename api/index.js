@@ -8,6 +8,9 @@ const postRoute = require("./routes/posts");
 const categoryRoute = require("./routes/categories");
 const multer = require("multer");
 const path = require("path");
+var cors = require('cors');
+
+app.use(cors())
 
 dotenv.config();
 app.use(express.json());
@@ -18,7 +21,7 @@ mongoose
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
-    useFindAndModify:true
+    useFindAndModify:false
   })
   .then(console.log("Connected to MongoDB"))
   .catch((err) => console.log(err));

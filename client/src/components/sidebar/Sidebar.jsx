@@ -18,12 +18,13 @@ export default function Sidebar() {
       <div className="sidebarItem">
         <span className="sidebarTitle">ABOUT ME</span>
         <img
-          src="https://i.pinimg.com/236x/1e/3f/58/1e3f587572a7a7b20bbf1828595a1786--holiday-party-themes-holiday-gift-guide.jpg"
+          src="https://photosfile.com/wp-content/uploads/2022/07/Cartoon-DP-Boy-59.jpeg"
           alt=""
+          className="sidebarphoto"
         />
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate qui
-          necessitatibus nostrum illum reprehenderit.
+          This is a blog website created by Naitik Mishra. I am a student of IIIT Ranchi and branch is electronics and communication 
+          engineering.
         </p>
       </div>
       <div className="sidebarItem">
